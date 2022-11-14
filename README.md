@@ -1,4 +1,4 @@
-# Github Helper
+# GIT/Github Helper
 
 __What is GIT__
 
