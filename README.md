@@ -10,7 +10,7 @@ __Using GIT__
 - Code editors & IDEs (eg. VS code with an amazing GitLens extantion)
 - Graphical UI
 
-__Configuting GIT__
+__Configurating GIT__
 
 - SYSTEM --> All users
 - GLOBAL --> All repositories of the current user
@@ -26,3 +26,17 @@ Set up a default editor (VS code) for updating configs:
     - Windows `git config --global core.autocrlf true`
 - To get help `git config --help` or shorter help (summary) `git config -h`
 
+## Creating Snapshots
+
+- `git init` - to initialize empty Git repository
+
+After running this command .git folder is created to store all information. Do __NOT__ delete this folder.
+
+### Git Workflow
+
+Directory --> Staging Area --> Repository to store snapshots
+
+- `git add file1 file2` to add file1 and file2 into staging area
+- If all is good we save them to the repository `git commit -m <meaningful message>`
+
+__NOTE__: Once we commit the the files from staging area the staging area keeps the files there. They are not deleted. 
