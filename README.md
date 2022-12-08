@@ -39,4 +39,31 @@ Directory --> Staging Area --> Repository to store snapshots
 - `git add file1 file2` to add file1 and file2 into staging area
 - If all is good we save them to the repository `git commit -m <meaningful message>`
 
-__NOTE__: Once we commit the the files from staging area the staging area keeps the files there. They are not deleted. 
+__NOTE__: Once we commit the the files from staging area the staging area keeps the files there. They are not deleted.
+
+ ### Staging files
+
+ - `git add .` add all files in current working directory recursively.
+ - `git add *.txt` add all files in current working directory wiht .txt extention
+ - `git add file1.txt file2.txt`
+
+ To unstage files from staging area we can use following command:
+ - `git rm --cached file1.txt`
+
+ ### Committing Changes
+
+ - `git commit -m "Short description"`
+ - `git commit` will open your default editor
+    - first line should be your short description
+    - at third line we can write more robust description
+
+### Skipping the Staging Area
+Do it only when you know what you are doing!
+
+- `git commit -a -m "Short description"` -a stands for all modify files
+- `git commit -am "Short description"` the flags can be combined
+
+### Removing files
+We use linux command `rm file1.txt` but the file1.txt still exists in stage are. To see all files in stage area we can run `git ls-files` so we have to add the removed file and commit it.
+
+Or we can simply run `git rm file1.txt` which remove the file from working directory as well as from staging area.
