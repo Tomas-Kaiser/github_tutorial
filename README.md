@@ -280,3 +280,8 @@ git tag -d v1.0                 # Deletes the given tag
 ```
 
 ## Branching
+
+- `git branch <name-of-branch>` eg. `git branch bugfix` to create a bugfix branch
+- `git brnach` to list all branches
+- `git checkout <name-of-branch>` or `git switch <name-of-branch>` to switch branch
+- `git branch -m <old-name-branch> <new-name-branch>` eg. `git branch -m bugfix bugfix/signup-form`
