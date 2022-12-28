@@ -285,3 +285,33 @@ git tag -d v1.0                 # Deletes the given tag
 - `git brnach` to list all branches
 - `git checkout <name-of-branch>` or `git switch <name-of-branch>` to switch branch
 - `git branch -m <old-name-branch> <new-name-branch>` eg. `git branch -m bugfix bugfix/signup-form`
+- `git branch -d <name-of-branch>` to delete a branch
+
+### Comparing Branches
+
+- `git diff master..bugfix/signup-form`
+- `git diff bugfix/signup-form` in case we are currently in master branch
+
+### Stashing
+
+- `git stash push -m “New tax rules”` to creates a new stash 
+- `git stash list` to lists all the stashes
+- `git stash show stash@{1}` to Shows the given stash
+- `git stash show 1` a shortcut for `stash@{1}`
+- `git stash apply 1` to applies the given stash to the working dir 
+- `git stash drop 1` to deletes the given stash  git stash clear # Deletes all the stashes
+
+### Merging
+
+- Fast-forward (if branches have not diverged)
+- 3-way (if branches have diverged)
+
+### Viewing Merged and Unmerged Branches
+
+- `git branch --merged`
+- `git branch --no-merged`
+
+### Aborting a Merge
+
+- `git merge --abort`
+
